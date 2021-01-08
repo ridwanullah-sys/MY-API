@@ -7,5 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class review extends Model
 {
-    use HasFactory;
+    public function product(){
+        return $this->belongsto('App\Models\product');
+    }
 }
